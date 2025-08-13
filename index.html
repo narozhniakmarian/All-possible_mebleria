@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/All-possible_mebleria/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Меблерія</title>
+    <script type="module" crossorigin src="/All-possible_mebleria/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/All-possible_mebleria/assets/vendor-BDtnXfrh.js">
+    <link rel="stylesheet" crossorigin href="/All-possible_mebleria/assets/vendor-IwFjQqvT.css">
+    <link rel="stylesheet" crossorigin href="/All-possible_mebleria/assets/index-CaBmBSr9.css">
+  </head>
+  <body>
+    <!-- Header partial -->
+    <header class="header">
+  <div class="container header-container">
+    <div class="logo-wrap">
+      <a href="./index.html" class="header-logo">
+        <svg class="icon-header-logo" width="159" height="35">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
+
+    <div class="burger-box">
+      <button class="burger-button" type="button" data-modal-open>
+        <svg class="burger-icon" width="32" height="32">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-burger-menu"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="header-nav">
+      <nav class="header-nav-wrap">
+        <ul class="header-menu">
+          <li><a href="#furniture">Наші меблі</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#FAQ-section">Часті питання</a></li>
+          <li><a href="#feedback">Відгуки</a></li>
+        </ul>
+        <button class="nav-btn scroll-to-furniture" type="button">
+          До покупок
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <!-- Hero partial -->
+      <!-- ----------- Hero ------------------- -->
+
+<section class="hero">
+  <div class="container">
+    <h1 class="title">Створіть свій ідеальний дім</h1>
+    <p class="section-text hero-text">
+      Відкрийте для себе колекцію стильних та комфортних меблів, які перетворять
+      ваш простір. Наша продукція поєднує в собі елегантність та
+      функціональність.
+    </p>
+    <a href="#feedback" class="hero-btn">Що про нас думають</a>
+  </div>
+</section>
+
+<!-- -------Other-sections-------------- -->
+
+
+      <!-- Furniture-list partial -->
+      <section id="furniture" class="furniture">
+  <div class="container">
+    <h2 class="section-title furniture_title">Наші меблі</h2>
+    <p class="section-text furniture_subtitle">
+      Знайдіть ідеальні рішення для вашого інтер'єру
+    </p>
+
+    <ul class="visually-hidden">
+      <li>
+        <img
+          class="all-products"
+          src="/All-possible_mebleria/assets/all-products-min-D36yzKht.png"
+          alt="all-products"
+        />
+        <img
+          class="bathroom-furniture"
+          src="/All-possible_mebleria/assets/bathroom-furniture-min-Cigq9YRO.png"
+          alt="bathroom-furniture"
+        />
+        <img
+          class="beds-and-mattresses"
+          src="/All-possible_mebleria/assets/beds-and-mattresses-min-PoamBX7q.png"
+          alt="beds-and-mattresses"
+        />
+        <img
+          class="cabinets-and-storage-systems"
+          src="/All-possible_mebleria/assets/cabinets-and-storage-systems-min-D4KM0lez.png"
+          alt="cabinets-and-storage-systems"
+        />
+        <img
+          class="chairs-and-stools"
+          src="/All-possible_mebleria/assets/chairs-and-stools-min-D7RlQ5VT.png"
+          alt="chairs-and-stools"
+        />
+        <img
+          class="childrens-furniture"
+          src="/All-possible_mebleria/assets/childrens-furniture-min-CL41Tzl8.png"
+          alt="childrens-furniture"
+        />
+        <img
+          class="decor-and-accessories"
+          src="/All-possible_mebleria/assets/decor-and-accessories-min-CSx8ftux.png"
+          alt="decor-and-accessories"
+        />
+        <img
+          class="garden-and-outdoor-furnitur"
+          src="/All-possible_mebleria/assets/garden-and-outdoor-furniture-min-CvwZfEmo.png"
+          alt="garden-and-outdoor-furnitur"
+        />
+        <img
+          class="hallway-furniture"
+          src="/All-possible_mebleria/assets/hallway-furniture-min-D-inWSfp.png"
+          alt="hallway-furniture"
+        />
+        <img
+          class="kitchens"
+          src="/All-possible_mebleria/assets/kitchens-min-DDOe3BWE.png"
+          alt="kitchens"
+        />
+        <img
+          class="office-furniture"
+          src="/All-possible_mebleria/assets/office-furniture-min-CMFUmPpe.png"
+          alt="office-furniture"
+        />
+        <img
+          class="tables"
+          src="/All-possible_mebleria/assets/tables-min-DXePiBr9.png"
+          alt="tables"
+        />
+        <img
+          class="upholstered-furniture"
+          src="/All-possible_mebleria/assets/upholstered-furniture-min-0VUoCfES.png"
+          alt="upholstered-furniture"
+        />
+      </li>
+    </ul>
+    <ul class="furniture-categories"></ul>
+    <div id="loader" class="loader hidden"></div>
+    <ul class="furniture-gallery furniture_grid"></ul>
+    <!-- додаю aria-label М.Н -->
+    <button
+      type="button"
+      id="furniture-loadMoreBtn"
+      class="btn btn-primary visually-hidden-moreBtn"
+      aria-label="Show more products"
+    >
+      Показати ще
+    </button>
+
+    <!-- Desktop pagination (hidden on mobile) -->
+    <div class="furniture-pagination desktop-pagination">
+      <button
+        type="button"
+        class="pagination-btn prev-btn"
+        id="furniture-prevBtn"
+        aria-label="Попередня сторінка"
+      >
+        <svg class="pagination-icon" width="24" height="24">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-left-arrow-alt"></use>
+        </svg>
+      </button>
+      <div class="pagination-numbers" id="furniture-paginationNumbers"></div>
+      <button
+        type="button"
+        class="pagination-btn next-btn"
+        id="furniture-nextBtn"
+        aria-label="Наступна сторінка"
+      >
+        <svg class="pagination-icon" width="24" height="24">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-right-arrow-alt"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+      <!-- About-us partial -->
+      <section class="about-us" id="about">
+  <div class="container about-us-box">
+    <div class="about-us-text">
+      <h2 class="section-title">Про Меблерію</h2>
+      <p class="section-text">
+        У Меблерії ми прагнемо створювати затишок та функціональність у кожному
+        домі. Наша місія - пропонувати високоякісні меблі, що поєднують у собі
+        сучасний дизайн, довговічність та доступність. Ми віримо, що ідеальний
+        інтер'єр починається з правильних меблів.
+      </p>
+    </div>
+    <div class="img-box">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="/All-possible_mebleria/assets/peoples-desktop-min-CdrowMvy.jpg 1x, /All-possible_mebleria/assets/peoples-desktop@2x-min-DMTED8ir.jpg 2x"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/All-possible_mebleria/assets/peoples-tablet-min-7Y_tGmtr.jpg 1x, /All-possible_mebleria/assets/peoples-tablet@2x-min-BxmN059U.jpg 2x"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/All-possible_mebleria/assets/people-mobile-min-a8yD_jzz.jpg 1x, /All-possible_mebleria/assets/people-mobile@2x-min-Il3Baj2s.jpg 2x"
+        />
+        <img
+          src="/All-possible_mebleria/assets/peoples-desktop-min-CdrowMvy.jpg"
+          alt="The team at the table"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+      
+          <!-- Popular goods partial -->
+    <section class="popular-goods-section">
+    <div class="container">
+        <h2 class="section-title popular-goods-title">Популярні товари</h2>
+        <div class="popular-goods-swiper swiper">
+            <ul class="popular-goods-list swiper-wrapper">
+            </ul>
+            <div class="swiper-navigation">
+                <div class="popular-goods-swiper-pagination"></div>
+                <div class="swiper-buttons">
+                    <button class="popular-goods-swiper-button-prev custom-nav">
+                        <svg class="prev-arrow" width="24" height="24">
+                            <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-left-arrow-alt"></use>
+                        </svg>
+                    </button>
+                    <button class="popular-goods-swiper-button-next custom-nav">
+                        <svg class="next-arrow" width="24" height="24">
+                            <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-right-arrow-alt"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+      <!-- FAQ-section partial -->
+      <section id="FAQ-section">
+  <div class="container faq-container">
+    <h2 class="faq-title section-title">Часті питання</h2>
+    <ul class="accordion-container">
+      <li class="ac js-enabled item-border">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Як здійснюється доставка меблів?
+            <svg class="ac-icon-btn" width="32" height="32">
+              <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Ми доставляємо замовлення по всій Україні через надійні служби.
+            Термін доставки зазвичай складає 3-7 днів залежно від регіону.
+          </p>
+        </div>
+      </li>
+
+      <li class="ac js-enabled item-border">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Чи є можливість вибрати колір або матеріал?
+            <svg class="ac-icon-btn" width="32" height="32">
+              <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Так, у багатьох моделях доступні варіанти оббивки та кольорів. Усі
+            доступні опції вказані на сторінці товару.
+          </p>
+        </div>
+      </li>
+
+      <li class="ac js-enabled item-border">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Чи можна повернути товар, якщо він не підійшов?
+            <svg class="ac-icon-btn" width="32" height="32">
+              <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Так, ви можете повернути товар протягом 14 днів, якщо він не був у
+            користуванні та збережений у первинному вигляді.
+          </p>
+        </div>
+      </li>
+      <li class="ac js-enabled item-border">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Чи надаєте ви послугу збирання меблів?
+            <svg class="ac-icon-btn" width="32" height="32">
+              <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Так, під час оформлення замовлення можна обрати послугу збирання.
+            Наші майстри зберуть меблі у зручний для вас час.
+          </p>
+        </div>
+      </li>
+      <li class="ac js-enabled item-border">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Як здійснити оплату?
+            <svg class="ac-icon-btn" width="32" height="32">
+              <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Ми приймаємо оплату карткою онлайн, банківським переказом або
+            післяплатою при отриманні.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+      <!-- Feedback-section partial -->
+      <section id="feedback" class="feedback">
+    <div class="container">
+        <div class="feedback-textbox">
+            <h2 class="section-title">Відгуки клієнтів</h2>
+            <p class="section-text">Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі.</p>
+        </div>
+        <div class="feedback-swiper swiper">
+            <img class="star-to-run visually-hidden" src="data:image/svg+xml,%3csvg%20width='21'%20height='21'%20viewBox='0%200%2021%2021'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9.5709%201.47649C9.91464%200.612003%2011.0854%200.612004%2011.4291%201.47649L13.4579%206.57884C13.6029%206.94328%2013.9306%207.19229%2014.3067%207.22384L19.5727%207.66545C20.4649%207.74027%2020.8267%208.90496%2020.1469%209.51407L16.1348%2013.1091C15.8483%2013.3659%2015.723%2013.7688%2015.8106%2014.1527L17.0364%2019.528C17.244%2020.4387%2016.2969%2021.1586%2015.533%2020.6706L11.0246%2017.79C10.7025%2017.5842%2010.2975%2017.5842%209.9755%2017.79L5.467%2020.6706C4.70312%2021.1586%203.75596%2020.4387%203.96364%2019.528L5.18943%2014.1527C5.27699%2013.7688%205.15183%2013.3659%204.86527%2013.1091L0.853063%209.51407C0.173281%208.90496%200.535068%207.74027%201.42729%207.66545L6.69337%207.22384C7.06952%207.19229%207.39717%206.94328%207.54208%206.57884L9.5709%201.47649Z'%20fill='%23080C09'%20/%3e%3c/svg%3e" alt="Star">
+            <ul class="feedback-list swiper-wrapper"></ul>
+            <div class="swiper-container">
+                <div class="swiper-pagination"></div>
+                <div class="swaper-btn-subbox">
+                    <button class="swiper-button-prev">
+                        <svg class="swiper-svg-button-prev" width="24" height="24">
+                            <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-left-arrow-alt"></use>
+                        </svg>
+                    </button>
+                    <button class="swiper-button-next">
+                        <svg class="swiper-svg-button-next" width="24" height="24">
+                            <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-right-arrow-alt"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+    <!-- Footer partial -->
+    <footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-logo">
+      <a href="./index.html" class="footer-logo-wrapper">
+        <svg class="footer-logo-img" width="145" height="32">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="footer-info">
+      <div class="footer-nav footer-copyright">
+        <p class="footer-copyright-text footer-text-small">
+          © 2025 Relume. Всі права захищені.
+        </p>
+      </div>
+    </div>
+    <nav class="footer-links">
+      <a href="#furniture" class="footer-link">
+        <div class="footer-link-text footer-link-style footer-text-regular">
+          Наші меблі
+        </div>
+      </a>
+      <a href="#about" class="footer-link">
+        <div class="footer-link-text footer-link-style footer-text-regular">
+          Про нас
+        </div>
+      </a>
+      <a href="#FAQ-section" class="footer-link">
+        <div class="footer-link-text footer-link-style footer-text-regular">Часті питання</div>
+      </a>
+      <a href="#feedback" class="footer-link">
+        <div class="footer-link-contact footer-link-style footer-text-regular">
+          Відгуки
+        </div>
+      </a>
+    </nav>
+    <div class="footer-socials">
+      <a
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="footer-social-icon" width="24" height="24">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-Youtube"></use>
+        </svg>
+      </a>
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="footer-social-icon" width="24" height="24">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-Instagram"></use>
+        </svg>
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="footer-social-icon" width="24" height="24">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-Facebook"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Furniture details modal partial -->
+    <div class="modal">
+  <div class="modal-container">
+    <button
+      class="modal-close-btn"
+      type="button"
+      aria-label="Close product details window"
+    >
+      <svg class="icon-close" width="32" height="32">
+        <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+
+    <!-- Order modal partial -->
+    <div class="order-modal">
+    <div class="form-wrapper">
+        <button type="button" class="close-form-btn" aria-label="Close order window">
+            <svg class="close-form-svg" width="32" height="32">
+                <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-close"></use>
+            </svg>
+        </button>
+        <h2 class="section-title form-title">Замовити зворотний зв'язок</h2>
+        <form class="modal-form">
+            <label class="label-form">Емейл*
+                <input class="input-form input-email" type="email" id="email" name="email" aria-label="Email address"
+                    placeholder="12345ggg@gmail.com" />
+            </label>
+            <label class="label-form label-phone">Телефон*
+                <input class="input-form input-phone" type="tel" id="phone" name="phone" pattern="^\+380\d{9}$"
+                    maxlength="13" aria-label="Phone number" placeholder="+38 (099) 123 22 11" inputmode="numeric" />
+            </label>
+            <label class="label-form">Коментар
+                <textarea class="input-form textarea" name="comment" id="comment" aria-label="Comment"
+                    placeholder="Type your message..."></textarea>
+            </label>
+            <button type="submit" class="submit-btn" aria-label="Submit order">
+                Надіслати заявку
+            </button>
+        </form>
+    </div>
+</div>
+
+    <!--   Header modal   -->
+    <div class="header-modal-overlay" data-modal-mobnav>
+  <div class="tab-modal-header tablet-only">
+    <a href="./index.html" class="header-logo">
+      <svg class="icon-header-logo" width="159" height="35">
+        <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <button
+      aria-label="exit tablet navigation"
+      class="close-tab-btn"
+      type="button"
+      data-modal-close
+    >
+      <svg class="close-icon" width="32" height="32">
+        <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="mob-modal-wrap">
+    <div class="logo-close-wrap mobile-only">
+      <a href="./index.html" class="header-logo">
+        <svg class="icon-header-logo" width="159" height="35">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <button
+        aria-label="exit mobile navigation"
+        class="close-mod"
+        type="button"
+        data-modal-close
+      >
+        <svg class="close-icon" width="32" height="32">
+          <use href="/All-possible_mebleria/assets/icons-BtuzxMEs.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mob-nav-wrap">
+      <nav aria-label="mobile-navigation" class="mobile-menu">
+        <ul class="header-menu">
+          <li><a href="#furniture">Наші меблі</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#FAQ-section">Часті питання</a></li>
+          <li><a href="#feedback">Відгуки</a></li>
+        </ul>
+        <button class="nav-btn scroll-to-furniture" type="button">
+          До покупок
+        </button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </body>
+</html>
+
