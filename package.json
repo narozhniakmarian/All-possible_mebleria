@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "All-possible_mebleria",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/All-possible/",
+    "build": "vite build --base=/All-possible_mebleria/",
     "preview": "vite preview"
   },
   "devDependencies": {
